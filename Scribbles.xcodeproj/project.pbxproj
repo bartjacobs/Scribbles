@@ -12,6 +12,7 @@
 		CCD256641F90BB5E00AE8539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD256631F90BB5E00AE8539 /* Assets.xcassets */; };
 		CCD256751F90BBB000AE8539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD256731F90BBA800AE8539 /* Main.storyboard */; };
 		CCD256761F90BBB000AE8539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD256741F90BBA800AE8539 /* LaunchScreen.storyboard */; };
+		CCD2567C1F90BEA000AE8539 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD2567B1F90BEA000AE8539 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		CCD256681F90BB5E00AE8539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCD256731F90BBA800AE8539 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CCD256741F90BBA800AE8539 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCD256791F90BE9F00AE8539 /* Scribbles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribbles.entitlements; sourceTree = "<group>"; };
+		CCD2567B1F90BEA000AE8539 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD2567C1F90BEA000AE8539 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				CCD2565B1F90BB5E00AE8539 /* Scribbles */,
 				CCD2565A1F90BB5E00AE8539 /* Products */,
+				CCD2567A1F90BEA000AE8539 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		CCD2565B1F90BB5E00AE8539 /* Scribbles */ = {
 			isa = PBXGroup;
 			children = (
+				CCD256791F90BE9F00AE8539 /* Scribbles.entitlements */,
 				CCD2566E1F90BB6200AE8539 /* Application Delegate */,
 				CCD256771F90BBB300AE8539 /* View Controllers */,
 				CCD256721F90BB8900AE8539 /* Storyboards */,
@@ -120,6 +126,14 @@
 			path = "Root View Controller";
 			sourceTree = "<group>";
 		};
+		CCD2567A1F90BEA000AE8539 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2567B1F90BEA000AE8539 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +167,14 @@
 					CCD256581F90BB5E00AE8539 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -311,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scribbles/Scribbles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2493UGBPKJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribbles/Supporting Files/Info.plist";
@@ -326,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scribbles/Scribbles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2493UGBPKJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Scribbles/Supporting Files/Info.plist";
