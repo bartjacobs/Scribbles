@@ -7,7 +7,22 @@
 //
 
 import UIKit
+import CloudKit
 
 class RootViewController: UIViewController {
+
+    // MARK: - View Life Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        CKContainer.default().fetchUserRecordID { (recordID, error) in
+            if let error = error {
+                print(error)
+            } else if let recordID = recordID {
+                print(recordID)
+            }
+        }
+    }
 
 }
