@@ -13,6 +13,7 @@
 		CCD256751F90BBB000AE8539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD256731F90BBA800AE8539 /* Main.storyboard */; };
 		CCD256761F90BBB000AE8539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD256741F90BBA800AE8539 /* LaunchScreen.storyboard */; };
 		CCD2567C1F90BEA000AE8539 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD2567B1F90BEA000AE8539 /* CloudKit.framework */; };
+		CCD2567F1F90C21300AE8539 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2567E1F90C21300AE8539 /* CloudKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CCD256741F90BBA800AE8539 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCD256791F90BE9F00AE8539 /* Scribbles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scribbles.entitlements; sourceTree = "<group>"; };
 		CCD2567B1F90BEA000AE8539 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CCD2567E1F90C21300AE8539 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				CCD256771F90BBB300AE8539 /* View Controllers */,
 				CCD256721F90BB8900AE8539 /* Storyboards */,
 				CCD256701F90BB7600AE8539 /* Resources */,
+				CCD2567D1F90C20000AE8539 /* Managers */,
 				CCD2566F1F90BB6D00AE8539 /* Supporting Files */,
 			);
 			path = Scribbles;
@@ -132,6 +135,14 @@
 				CCD2567B1F90BEA000AE8539 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCD2567D1F90C20000AE8539 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2567E1F90C21300AE8539 /* CloudKitManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 			files = (
 				CCD2565F1F90BB5E00AE8539 /* RootViewController.swift in Sources */,
 				CCD2565D1F90BB5E00AE8539 /* AppDelegate.swift in Sources */,
+				CCD2567F1F90C21300AE8539 /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

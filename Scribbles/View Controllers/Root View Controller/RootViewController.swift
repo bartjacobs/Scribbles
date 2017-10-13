@@ -10,6 +10,10 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    // MARK: - Properties
+
+    private let cloudKitManager = CloudKitManager()
+
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
