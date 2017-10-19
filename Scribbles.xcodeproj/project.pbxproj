@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F9FE5A4655859B15EA09FD6 /* Pods_Scribbles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5720EB382E9B633E5E4800FB /* Pods_Scribbles.framework */; };
 		CCD2565D1F90BB5E00AE8539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2565C1F90BB5E00AE8539 /* AppDelegate.swift */; };
 		CCD2565F1F90BB5E00AE8539 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2565E1F90BB5E00AE8539 /* RootViewController.swift */; };
 		CCD256641F90BB5E00AE8539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD256631F90BB5E00AE8539 /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46CB0B1EB9033E8A0F85854E /* Pods-Scribbles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbles.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbles/Pods-Scribbles.release.xcconfig"; sourceTree = "<group>"; };
+		5720EB382E9B633E5E4800FB /* Pods_Scribbles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribbles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B930CCE07D9B20B317499939 /* Pods-Scribbles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribbles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribbles/Pods-Scribbles.debug.xcconfig"; sourceTree = "<group>"; };
 		CCD256591F90BB5E00AE8539 /* Scribbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD2565C1F90BB5E00AE8539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD2565E1F90BB5E00AE8539 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD2567C1F90BEA000AE8539 /* CloudKit.framework in Frameworks */,
+				2F9FE5A4655859B15EA09FD6 /* Pods_Scribbles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,7 @@
 				CCD2565B1F90BB5E00AE8539 /* Scribbles */,
 				CCD2565A1F90BB5E00AE8539 /* Products */,
 				CCD2567A1F90BEA000AE8539 /* Frameworks */,
+				FB1B00BACFC5DF87E87A579F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD2567B1F90BEA000AE8539 /* CloudKit.framework */,
+				5720EB382E9B633E5E4800FB /* Pods_Scribbles.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +152,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		FB1B00BACFC5DF87E87A579F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B930CCE07D9B20B317499939 /* Pods-Scribbles.debug.xcconfig */,
+				46CB0B1EB9033E8A0F85854E /* Pods-Scribbles.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCD2566B1F90BB5E00AE8539 /* Build configuration list for PBXNativeTarget "Scribbles" */;
 			buildPhases = (
+				9ADC1BA06969AA27E86C1086 /* [CP] Check Pods Manifest.lock */,
 				CCD256551F90BB5E00AE8539 /* Sources */,
 				CCD256561F90BB5E00AE8539 /* Frameworks */,
 				CCD256571F90BB5E00AE8539 /* Resources */,
+				95CC6632534B73C922BB20F3 /* [CP] Embed Pods Frameworks */,
+				3014401B63A9BCAE4479F694 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +238,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3014401B63A9BCAE4479F694 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scribbles/Pods-Scribbles-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95CC6632534B73C922BB20F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Scribbles/Pods-Scribbles-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scribbles/Pods-Scribbles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ADC1BA06969AA27E86C1086 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scribbles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCD256551F90BB5E00AE8539 /* Sources */ = {
@@ -343,6 +418,7 @@
 		};
 		CCD2566C1F90BB5E00AE8539 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B930CCE07D9B20B317499939 /* Pods-Scribbles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Scribbles/Scribbles.entitlements;
@@ -359,6 +435,7 @@
 		};
 		CCD2566D1F90BB5E00AE8539 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46CB0B1EB9033E8A0F85854E /* Pods-Scribbles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Scribbles/Scribbles.entitlements;
