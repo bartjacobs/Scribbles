@@ -6,6 +6,8 @@
 //  Copyright © 2017 Cocoacasts. All rights reserved.
 //
 
+import RxSwift
+import RxCocoa
 import CloudKit
 
 class CloudKitManager {
@@ -16,7 +18,9 @@ class CloudKitManager {
 
     // MARK: -
 
-    private(set) var accountStatus: CKAccountStatus = .couldNotDetermine
+    private let _accountStatus = BehaviorRelay<CKAccountStatus>(value: .couldNotDetermine)
+
+    var accountStatus: Observable<CKAccountStatus> { return _accountStatus.asObservable() }
 
     // MARK: - Initialization
 
@@ -45,7 +49,7 @@ class CloudKitManager {
 
             // Update Account Status
             print(accountStatus.rawValue)
-            self.accountStatus = accountStatus
+            self._accountStatus.accept(accountStatus)
         }
     }
 
